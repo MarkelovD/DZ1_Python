@@ -47,8 +47,18 @@
 # Напишите программу, которая принимает на вход координаты двух точек
 # и находит расстояние между ними в 2D пространстве.
 
-import math
-segmentA = (int(input("введите координату х отрезка А: ")),int(input("введите координату y отрезка А: ")))
-SegmentB = (int(input("введите координату х отрезка B: ")),int(input("введите координату y отрезка B: ")))
-lenghtResultSegment = float(math.sqrt(math.pow((SegmentB[0]-segmentA[0]),2)+math.pow((SegmentB[1]-segmentA[1]),2)))
-print(f"длинна отрезка лежащего между кординатами {segmentA} и координатами {SegmentB} = {round(lenghtResultSegment,2)}")
+# import math
+# segmentA = (int(input("введите координату х отрезка А: ")),int(input("введите координату y отрезка А: ")))
+# SegmentB = (int(input("введите координату х отрезка B: ")),int(input("введите координату y отрезка B: ")))
+# lenghtResultSegment = float(math.sqrt(math.pow((SegmentB[0]-segmentA[0]),2)+math.pow((SegmentB[1]-segmentA[1]),2)))
+# print(f"длинна отрезка лежащего между кординатами {segmentA} и координатами {SegmentB} = {round(lenghtResultSegment,2)}")
+
+# задача 5
+# Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+decX = int(input("введите значение декаты "))
+decY = int(input("введите значение декаты "))
+decZ = int(input("введите значение декаты "))
+if (decX<0 or decX>1) or (decY<0 or decY>1) or (decZ<0 or decZ>1):
+    print("неверный формат данных")
+else:
+    print(bool((not(decX or decY or decZ))==(not(decX) and not(decY) and not(decZ))))
