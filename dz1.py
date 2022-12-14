@@ -14,15 +14,31 @@
 # причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится
 # эта точка (или на какой оси она находится).
 
-CoordX = int(input("введите координату x: "))
-CoordY = int(input("введите координату y: "))
-if CoordX>0 and CoordY>0:
-    print("I четверть")
-elif CoordX>0 and CoordY<0:
-    print("IV четверть")
-elif CoordX<0 and CoordY<0:
-    print("III четверть")
-elif CoordX<0 and CoordY>0:
-    print("II четверть")
-elif CoordX==0 or CoordY==0:
-    print("введеные координаты лежат на осях")
+# CoordX = int(input("введите координату x: "))
+# CoordY = int(input("введите координату y: "))
+# if CoordX>0 and CoordY>0:
+#     print("I четверть")
+# elif CoordX>0 and CoordY<0:
+#     print("IV четверть")
+# elif CoordX<0 and CoordY<0:
+#     print("III четверть")
+# elif CoordX<0 and CoordY>0:
+#     print("II четверть")
+# elif CoordX==0 or CoordY==0:
+#     print("введеные координаты лежат на осях")
+
+# задача 3
+# Напишите программу, которая по заданному номеру четверти,
+# показывает диапазон возможных координат точек в этой четверти (x и y)
+
+fourthNumber = int(input("введите четверть в числовом формате: "))
+if fourthNumber == 1:
+    print("диапазон значений I четверти [X>0;Y>0]")
+elif fourthNumber == 2:
+    print("диапазон значений II четверти [X<0;Y>0]")
+elif fourthNumber == 3:
+    print("диапазон значений III четверти [X<0;Y<0]")
+elif fourthNumber == 4:
+    print("диапазон значений IV четверти [X>0;Y<0]")
+else:
+    print("такой четверти не существует")
