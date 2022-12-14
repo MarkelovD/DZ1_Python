@@ -31,14 +31,24 @@
 # Напишите программу, которая по заданному номеру четверти,
 # показывает диапазон возможных координат точек в этой четверти (x и y)
 
-fourthNumber = int(input("введите четверть в числовом формате: "))
-if fourthNumber == 1:
-    print("диапазон значений I четверти [X>0;Y>0]")
-elif fourthNumber == 2:
-    print("диапазон значений II четверти [X<0;Y>0]")
-elif fourthNumber == 3:
-    print("диапазон значений III четверти [X<0;Y<0]")
-elif fourthNumber == 4:
-    print("диапазон значений IV четверти [X>0;Y<0]")
-else:
-    print("такой четверти не существует")
+# fourthNumber = int(input("введите четверть в числовом формате: "))
+# if fourthNumber == 1:
+#     print("диапазон значений I четверти [X>0;Y>0]")
+# elif fourthNumber == 2:
+#     print("диапазон значений II четверти [X<0;Y>0]")
+# elif fourthNumber == 3:
+#     print("диапазон значений III четверти [X<0;Y<0]")
+# elif fourthNumber == 4:
+#     print("диапазон значений IV четверти [X>0;Y<0]")
+# else:
+#     print("такой четверти не существует")
+
+# задача 4
+# Напишите программу, которая принимает на вход координаты двух точек
+# и находит расстояние между ними в 2D пространстве.
+
+import math
+segmentA = (int(input("введите координату х отрезка А: ")),int(input("введите координату y отрезка А: ")))
+SegmentB = (int(input("введите координату х отрезка B: ")),int(input("введите координату y отрезка B: ")))
+lenghtResultSegment = float(math.sqrt(math.pow((SegmentB[0]-segmentA[0]),2)+math.pow((SegmentB[1]-segmentA[1]),2)))
+print(f"длинна отрезка лежащего между кординатами {segmentA} и координатами {SegmentB} = {round(lenghtResultSegment,2)}")
